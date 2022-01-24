@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Flashcards, Question, Answer, Hidden answer">
+    <meta name="description" content="Use flashcards to study and learn answers. Insert a question and an answer. The answer is hidden until you want to show it.">
+  </head>
+  <body onload="flashcardNone()">
+    <section id="bigSection">
+      <article id="article1">
+        <h1>My Flashcards
+        <button id="add" title="Add a flashcard" onclick=addFlashcard()><span class="material-icons-outlined"> add</span></button></h1>
+      </article>
+      <ul id="flashCards">
+      </ul>
+      <article id="article2">
+        <h2 id="newQuestion">Question:</h2>
+        <input type="text" id="newTextQuestion">
+        <h2 id="newAnswer">Answer:</h2>
+        <input type="text" id="newTextAnswer">
+        <article id="article3">
+          <button id="createIt">Create!</button>
+          <button id="changeIt">Change!</button>
+          <button id="exit" onclick="flashcardNone()">Cancel</button>
+        </article>
+      </article>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

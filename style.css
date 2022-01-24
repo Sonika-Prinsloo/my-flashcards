@@ -1,0 +1,306 @@
+:root {
+  --mainCol: indianred;
+  --mainColLighter: peachpuff;
+  --borderCol: mistyrose;
+  --pink: indianred;
+}
+
+* {
+  box-sizing: border-box;
+  clear: both;
+  font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--mainColLighter);
+  font-weight: lighter;
+}
+
+                               /* opskrif */
+
+#article1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: black 2px 2px 4px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: var(--mainCol);
+}
+
+#bigSection {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  margin: 20px 0 20px 0;
+  padding: 0;  
+  font-weight: lighter;
+}
+
+#add {
+  font-weight: lighter;
+  margin-left: 10px;
+  text-align: center;
+  border-radius: 2px;
+  border: 3px outset var(--borderCol);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+  vertical-align: middle;
+  background-color: white;
+  color: var(--mainCol);
+}
+
+#add:hover {
+  background-color: rgba(255, 255, 255, 0.897);
+}
+
+                              /*flashcards*/
+
+#flashCards {
+  text-align: center;
+  display: inline;
+  padding: 0;
+  margin:  auto;
+  width: fit-content;
+}
+ 
+.card {
+  overflow-wrap: break-word;
+  display: inline-flex;
+  overflow: hidden;
+  list-style-type: none;
+  margin: 8px 10px;
+  width: 270px;
+  height: 180px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1.5px 5px 0 rgba(0,0,0,0.19);
+  transition: all 1s;
+}
+
+.editDelete {
+  z-index: -1;
+  float: right;
+  margin: 5px 5px 0 0;
+}
+
+.editDelete .material-icons-outlined {
+  background-color: white;
+  border-radius: 2px;
+  font-size: 15px;
+  color: var(--pink);
+  width: 20px;
+  height: 18px;
+  padding: 3px;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 5px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1.5px 5px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+}
+
+.editDelete .material-icons-outlined:hover {
+  background-color: rgba(255, 255, 255, 0.795);
+}
+
+.show button {
+  background-color: white;
+  border-radius: 2px;
+  font-size: 15px;
+  color: var(--pink);
+  width: 110px;
+  height: 25px;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1.5px 5px 0 rgba(0,0,0,0.19);
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+
+.show button:hover {
+  background-color: rgba(255, 255, 255, 0.829);
+}
+
+.hideAnswerButton {
+  display: none;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  clear: both;
+}
+
+.front {
+  display: block;
+  background-color: var(--pink);
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  transition: all 1s;
+}
+
+.fronth2 {
+  color: white;
+}
+
+.front p {
+  font-weight: bold;
+  height: 70px;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.backh2 {
+  color: var(--pink);
+  display: none;
+  clear: both;
+}
+
+.backp {
+  display: none;
+}
+
+h2 {
+  margin: 0px;
+  padding: 0;
+}
+
+p {
+  margin: 20px;
+  padding: 0;
+}
+
+                            /*form for flashcards*/
+
+#article2 {
+  /* display must be flex */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 370px;
+  width: 50vw;
+  margin: 20px auto;
+  border-radius: 5px;
+  transition: all 1s;
+}
+
+#article2 h2 {
+  margin: 20px 0;
+  font-size: 40px;
+  color: var(--mainCol);
+}
+
+#article2 input[type="text"] {
+  border: none;
+  height: 40px;
+  width: 40vw;
+  font-size: 20px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1.5px 5px 0 rgba(0,0,0,0.19);
+}
+
+#article2 input[type="text"]:focus {
+  outline: none;
+  background-color: rgba(116, 182, 114, 0.137);
+}
+
+#article2 button {
+  margin: 40px 10px 0px;
+  height: 40px;
+  font-size: 15px;
+  color: white;
+
+  background-color: var(--mainCol);
+  border: var(--borderCol) outset 2px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1.5px 5px 0 rgba(0,0,0,0.19);
+}
+
+#article3 {
+  display: flex;
+  flex-direction: row;
+}
+
+#article2 button:hover {
+  background-color:var(--mainColLighter);
+}
+
+#changeIt {
+  display: none;
+}
+
+#createIt {
+  display: block;
+}
+
+@media all and (max-width:600px) {
+  #article2 {
+    width: 90vw;
+  }
+  #article2 input[type="text"] {
+    width: 80vw;
+  }
+  #flashCards {
+    margin: 6vw auto;
+    padding: 0;
+  }
+  .card {
+    margin: 2vw 2vw;
+  }
+}
+
+@media all and (max-width:430px) {
+  h1 {
+    font-size: 13vw;
+  }
+  #add {
+    height: 10vw;
+    width: 10vw;
+    padding: 0;
+    margin: 0;
+  }
+  #add .material-icons-outlined {
+    padding: 0;
+    margin: 0;
+    font-size: 6.5vw;
+  }
+  #article2 h2 {
+    font-size: 10vw;
+    margin: 7vw 0 7vw 0;
+  }
+  #article2 input[type="text"] {
+    font-size: 8vw;
+  }
+  #article2 button {
+    font-size: 4vw;
+    height: 8vw;
+    width: 17vw;
+    margin: 10vw 2vw 7vw 2vw;
+    padding: 0;
+  }
+  #article2 {
+    height: 100vw;
+  }
+  .card {
+    width: 90vw;
+  }
+  .editDelete .material-icons-outlined {
+    margin-left: 1vw;
+  }
+  .editDelete {
+    margin-top: 0.1vw;
+  }
+}
